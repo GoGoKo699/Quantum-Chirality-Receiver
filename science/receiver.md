@@ -15,13 +15,13 @@ For a nonzero real weight vector $`w=(w_x,w_y,w_z)`$, define
 \sigma_i\otimes\sigma_j\otimes\sigma_k.
 ```
 
-The following receiver implements $`\chi_w/(2\|w\|_2)`$ as a binary decision observable on its measurement inputs, where the first input to this measurement is the first qubit after storage.
+The following receiver implements $`\chi_w/(2\lVert w\rVert_2)`$ as a binary decision observable on its measurement inputs, where the first input to this measurement is the first qubit after storage.
 
 1. Independently select parity $`p\in\{+1,-1\}`$ with equal probabilities. For the three permutations satisfying $`\varepsilon_{ijk}=p`$, jointly measure the three operators $`\sigma_i\otimes\sigma_j`$ on the first and second registers. Write their outcomes as $`s_{ij}\in\{+1,-1\}`$.
 2. On arrival of the third qubit, measure the one-qubit observable
 
 ```math
-B_{p,s}=\frac{p}{\|w\|_2}
+B_{p,s}=\frac{p}{\lVert w\rVert_2}
 \sum_{(i,j,k):\,\varepsilon_{ijk}=p}s_{ij}w_i\sigma_k .
 ```
 
@@ -29,7 +29,7 @@ B_{p,s}=\frac{p}{\|w\|_2}
 
 In step 1 the three pair observables commute. The product of any two is minus the third, so the joint measurement is a four-outcome projective measurement. They are the usual Bell observables $`X\otimes X,Y\otimes Y,Z\otimes Z`$ in rotated axes. A cyclic Pauli-axis rotation on the second qubit aligns the axes. The usual Bell circuit then uses a CNOT from the first qubit to the second, a Hadamard on the first, and two computational-basis measurements. This reads $`X\otimes X`$ and $`Z\otimes Z`$, with $`Y\otimes Y`$ obtained from their negative product. Afterward only the parity and two signs are retained.
 
-If $`P_s`$ are the Bell projectors for the chosen parity, then $`\sum_s s_{ij}P_s=\sigma_i\otimes\sigma_j`$. Substituting into $`\sum_s P_s\otimes B_{p,s}`$ and averaging over the two settings gives $`\chi_w/(2\|w\|_2)`$. This identity holds on all three-qubit states, regardless of the unknown source orientation.
+If $`P_s`$ are the Bell projectors for the chosen parity, then $`\sum_s s_{ij}P_s=\sigma_i\otimes\sigma_j`$. Substituting into $`\sum_s P_s\otimes B_{p,s}`$ and averaging over the two settings gives $`\chi_w/(2\lVert w\rVert_2)`$. This identity holds on all three-qubit states, regardless of the unknown source orientation.
 
 ## Match the receiver to a unital memory
 

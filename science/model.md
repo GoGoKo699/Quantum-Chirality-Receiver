@@ -4,7 +4,7 @@ The source supplies three independently prepared qubits with Bloch vectors $`r_1
 
 ## Source and operations
 
-Write $`\rho(r)=(I+r\cdot\sigma)/2`$, with $`\sigma=(X,Y,Z)`$ and $`\|r\|_2\leq 1`$. The joint input is the product $`\rho(r_1)\otimes\rho(r_2)\otimes\rho(r_3)`$. Each specimen becomes available only in its arrival slot. The receiver has a stable local frame, one specimen per slot, free classical randomness and records, and fresh local ancillas within a slot. The inputs consist of these three specimens. Ancillas are initialized locally in their arrival slots, and the memory environment is inaccessible.
+Write $`\rho(r)=(I+r\cdot\sigma)/2`$, with $`\sigma=(X,Y,Z)`$ and $`\lVert r\rVert_2\leq 1`$. The joint input is the product $`\rho(r_1)\otimes\rho(r_2)\otimes\rho(r_3)`$. Each specimen becomes available only in its arrival slot. The receiver has a stable local frame, one specimen per slot, free classical randomness and records, and fresh local ancillas within a slot. The inputs consist of these three specimens. Ancillas are initialized locally in their arrival slots, and the memory environment is inaccessible.
 
 Across the first gap, all retained quantum information passes through at most one use of the specified, calibrated qubit memory channel. The first-stage instrument may depend on classical randomness and produce a classical outcome. The channel and within-slot operations are fixed in the receiver's frame. All within-slot operations and the subsequent readout are ideal in the model. The theorem permits unlimited coherent storage across the second gap in its upper bound. An attaining receiver uses only classical records there.
 
@@ -21,12 +21,12 @@ The receiver knows $`T`$ and can implement local rotations in the trusted frame.
 For fixed magnitude $`d`$, the optimal score is
 
 ```math
-P^\star(d,T)=\frac12+\frac d{12}\max\{1,\|T\|_F\},
+P^\star(d,T)=\frac12+\frac d{12}\max\{1,\lVert T\rVert_F\},
 \qquad
-\|T\|_F^2=\operatorname{Tr}(T^\mathsf T T).
+\lVert T\rVert_F^2=\operatorname{Tr}(T^\mathsf T T).
 ```
 
-The score holds pointwise for the attaining receiver, so a lower-bound promise has value $`P^\star(\delta,T)`$. Immediate Pauli readout achieves the value when $`\|T\|_F\leq1`$. For $`\|T\|_F>1`$, the receiver carries the first qubit across the first gap, makes a Bell measurement when the second qubit arrives, and uses the classical result to choose a one-qubit measurement on the third. The weighted measurement settings depend only on $`T`$.
+The score holds pointwise for the attaining receiver, so a lower-bound promise has value $`P^\star(\delta,T)`$. Immediate Pauli readout achieves the value when $`\lVert T\rVert_F\leq1`$. For $`\lVert T\rVert_F>1`$, the receiver carries the first qubit across the first gap, makes a Bell measurement when the second qubit arrives, and uses the classical result to choose a one-qubit measurement on the third. The weighted measurement settings depend only on $`T`$.
 
 If the first gap carries only a classical record, the best score is $`1/2+d/12`$ even with unlimited later quantum storage. A noiseless first-gap qubit gives $`1/2+d/(4\sqrt3)`$, which equals the optimum when all three specimens are available for one joint measurement.
 

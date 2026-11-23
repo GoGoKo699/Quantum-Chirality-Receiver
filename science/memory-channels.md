@@ -1,12 +1,12 @@
 # Which memory channels help?
 
-For a known unital qubit memory, usefulness is determined by the squared Frobenius norm $`F=\|T\|_F^2`$. The threshold is strict: coherent storage improves the score exactly when $`F>1`$.
+For a known unital qubit memory, usefulness is determined by the squared Frobenius norm $`F=\lVert T\rVert_F^2`$. The threshold is strict: coherent storage improves the score exactly when $`F>1`$.
 
 ## Depolarization, dephasing, and unitarity
 
 A depolarizing memory with Bloch visibility $`v`$ has $`T=vI_3`$ and $`F=3v^2`$. Its visibility must exceed $`1/\sqrt3`$ for a gain. A dephasing memory with protected $`X`$ axis and transverse visibility $`v`$ has $`T=\operatorname{diag}(1,v,v)`$. Its $`F=1+2v^2`$ gives a gain for any positive transverse visibility. Complete dephasing lies at the threshold.
 
-For a unital qubit channel, the standard channel unitarity is $`u(\mathcal N)=F/3`$. This follows by averaging $`\|Tr\|_2^2`$ over unit Bloch vectors. The exact receiver criterion is therefore $`u(\mathcal N)>1/3`$. The average fidelity to the identity is $`1/2+\operatorname{Tr}(T)/6`$. The table evaluates two channels with the same average fidelity and different optimal decisions.
+For a unital qubit channel, the standard channel unitarity is $`u(\mathcal N)=F/3`$. This follows by averaging $`\lVert Tr\rVert_2^2`$ over unit Bloch vectors. The exact receiver criterion is therefore $`u(\mathcal N)>1/3`$. The average fidelity to the identity is $`1/2+\operatorname{Tr}(T)/6`$. The table evaluates two channels with the same average fidelity and different optimal decisions.
 
 | Memory map in Bloch coordinates | Average fidelity | Squared Frobenius norm | Optimal success at magnitude $`d`$ |
 |---|---:|---:|---:|
@@ -30,7 +30,7 @@ The effects sum to identity because $`XZX=-Z`$. Send the resulting qubit through
 ```math
 w=\left(\sqrt{\eta(1-t^2)},\sqrt{\eta(1-t^2)},\eta+ct\right),
 \qquad
-F_\eta(t)=\|w\|_2^2=2\eta(1-t^2)+(\eta+ct)^2 .
+F_\eta(t)=\lVert w\rVert_2^2=2\eta(1-t^2)+(\eta+ct)^2 .
 ```
 
 Take any $`t,\eta`$ with $`F_\eta(t)>0`$ for this implementation. The positive branch's measurement difference pulls back through the channel and the filter as
@@ -48,9 +48,9 @@ D=\frac{\sqrt{F_\eta(t)}}{6}\chi .
 
 The implementation carries one channel qubit across the first gap and no quantum register across the second. Its pointwise success at magnitude $`d`$ is $`1/2+d\sqrt{F_\eta(t)}/12`$.
 
-At $`t=1`$ the protocol has $`F_\eta(1)=1`$, the classical score. At $`t=0`$ it has $`F_\eta(0)=2\eta+\eta^2`$. This last value determines the optimal score for storage with no state-dependent first outcome: the affine offset acts on the identity and drops out of the twirled difference $`\Delta`$. If first-slot preprocessing has Bloch linear part $`S`$, its contraction property gives $`\|TS\|_F\leq\|T\|_F`$. The singlet-triplet norm calculation with no first-slot outcome then gives the upper bound $`1/2+d\|T\|_F/12`$. The $`t=0`$ receiver attains it with input-independent axis choices and feed-forward.
+At $`t=1`$ the protocol has $`F_\eta(1)=1`$, the classical score. At $`t=0`$ it has $`F_\eta(0)=2\eta+\eta^2`$. This last value determines the optimal score for storage with no state-dependent first outcome: the affine offset acts on the identity and drops out of the twirled difference $`\Delta`$. If first-slot preprocessing has Bloch linear part $`S`$, its contraction property gives $`\lVert TS\rVert_F\leq\lVert T\rVert_F`$. The singlet-triplet norm calculation with no first-slot outcome then gives the upper bound $`1/2+d\lVert T\rVert_F/12`$. The $`t=0`$ receiver attains it with input-independent axis choices and feed-forward.
 
-For $`1/3<\eta<1`$, maximizing this family gives
+For $`1/3\lt \eta\lt 1`$, maximizing this family gives
 
 ```math
 t_\star=\frac{\eta(1-\eta)}{2\eta-(1-\eta)^2}\in(0,1),
@@ -80,7 +80,7 @@ f(t)=\sqrt{a+2tb}+\sqrt{a-2tb},
 
 The decision effect of this readout may be chosen as the sign of $`H`$, with zero assigned to its kernel by a fair coin. It is odd under complex conjugation because $`\overline{H}=-H`$ in the computational basis. The channel, first-stage Kraus operators, and negative-branch rotations are real in that basis, so the decision observable pulled back to the original inputs is also odd. Common proper-rotation averaging preserves the success under the rotational prior and projects this observable onto a multiple of $`\chi`$. Indeed identity and pair correlations are the invariant terms of degrees zero and two in the Pauli expansion, and all are even under conjugation. This yields the same score pointwise.
 
-For $`\eta>0`$, choose $`t<1`$ sufficiently close to one. Then
+For $`\eta>0`$, choose $`t\lt 1`$ sufficiently close to one. Then
 
 ```math
 a-1-t^2b^2=(1-t^2)(2\eta+b^2-1)>0
