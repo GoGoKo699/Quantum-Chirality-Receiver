@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     env:
-      CAPTURE_REVISION: '8ed6c5e44188e7cb0e55e2dfec63f1ebc34de7e8'
+      CAPTURE_REVISION: '190fa7da086a6bd721e1bed86b799f6a1331eedb'
     steps:
       - name: Check out the proposed source
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
@@ -46,7 +46,7 @@ jobs:
       - name: Install the capture runtime
         run: |
           npm install --prefix "$RUNNER_TEMP/math-runtime" playwright@1.56.1 mathjax-full@3.2.1
-          node "$RUNNER_TEMP/math-runtime/node_modules/playwright/cli.js" install --with-deps chromium
+          node "$RUNNER_TEMP/math-runtime/node_modules/playwright/cli.js" install chromium
       - name: Probe the overview
         run: |
           export NODE_PATH="$RUNNER_TEMP/math-runtime/node_modules"
