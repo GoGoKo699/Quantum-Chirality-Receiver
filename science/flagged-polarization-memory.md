@@ -60,18 +60,18 @@ Each retained spin effect remains rank at most one after filtering, so its Bloch
 
 Rotate the branch axis to $`Z`$ in the measurement description, remove the factor $`s`$, and write $`F=\sqrt{I+tZ_1}`$ on pair one and two. In this pair let $`|s_0\rangle`$ be the real singlet and $`|t_i\rangle=-i(\sigma_i\otimes I)|s_0\rangle`$ its Cartesian triplets. The coefficient $`A_i`$ of the third specimen's Pauli $`\sigma_i`$ in $`\chi`$ equals $`2(|s_0\rangle\langle t_i|+|t_i\rangle\langle s_0|)`$.
 
-Refine the slot-two POVM to rank-one effects. Write each effect after congruence by $`F`$ as a projector on $`\psi_\ell=b_\ell s_0+\sum_i(u_{\ell i}+iv_{\ell i})t_i`$, with $`b_\ell\ge0`$. The vectors include the effect weights. The best last-slot Pauli direction is along $`u_\ell`$, giving contraction $`8b_\ell\lVert u_\ell\rVert`$. The projectors sum to $`I+tZ_1`$, imposing
+Refine the slot-two POVM to rank-one effects. Write each effect after congruence by $`F`$ as a projector on $`\psi_\ell=b_\ell s_0+\sum_i(u_{\ell i}+iv_{\ell i})t_i`$, with $`b_\ell\ge0`$. The vectors include the effect weights. The best last-slot Pauli direction is along $`u_\ell`$, giving contraction $`8b_\ell\lVert u_\ell\rVert`$. Write the subscript $`xy`$ for the two components in the equatorial plane. The projectors sum to $`I+tZ_1`$, imposing
 
 ```math
 \begin{aligned}
 \sum_\ell b_\ell^2&=1,& \sum_\ell b_\ell v_{\ell z}&=t,\\
 \sum_\ell (u_{\ell z}^2+v_{\ell z}^2)&=1,\\
-\sum_\ell(\lVert u_{\ell,\perp}\rVert^2+\lVert v_{\ell,\perp}\rVert^2)&=2,\\
+\sum_\ell(\lVert u_{\ell,xy}\rVert^2+\lVert v_{\ell,xy}\rVert^2)&=2,\\
 \sum_\ell(u_{\ell x}v_{\ell y}-u_{\ell y}v_{\ell x})&=t.
 \end{aligned}
 ```
 
-Cauchy–Schwarz gives $`\sum_\ell v_{\ell z}^2\ge t^2`$. For $`V=\sum_\ell\lVert v_{\ell,\perp}\rVert^2`$, the last identity similarly gives $`V(2-V)\ge t^2`$ and hence $`V\ge1-a`$. It follows that $`\sum_\ell\lVert u_\ell\rVert^2\le 2-t^2+a`$. A further Cauchy–Schwarz bounds the normalized contraction by $`m(t)`$.
+Cauchy–Schwarz gives $`\sum_\ell v_{\ell z}^2\ge t^2`$. For $`V=\sum_\ell\lVert v_{\ell,xy}\rVert^2`$, the last identity similarly gives $`V(2-V)\ge t^2`$ and hence $`V\ge1-a`$. It follows that $`\sum_\ell\lVert u_\ell\rVert^2\le 2-t^2+a`$. A further Cauchy–Schwarz bounds the normalized contraction by $`m(t)`$.
 
 For attainment at $`t\lt 1`$, take three equally spaced angles $`\phi`$ and both signs independently, and form the six vectors $`\psi=s_0+\sum_i(u_i+iv_i)t_i`$ using
 
