@@ -23,7 +23,7 @@ For fixed magnitude $`d`$, the optimal score is
 ```math
 P^\star(d,T)=\frac12+\frac d{12}\max\{1,\lVert T\rVert_F\},
 \qquad
-\lVert T\rVert_F^2=\operatorname{Tr}(T^\mathsf T T).
+\lVert T\rVert_F^2=\mathrm{Tr}(T^\mathsf T T).
 ```
 
 The score holds pointwise for the attaining receiver, so a lower-bound promise has value $`P^\star(\delta,T)`$. Immediate Pauli readout achieves the value when $`\lVert T\rVert_F\leq1`$. For $`\lVert T\rVert_F>1`$, the receiver carries the first qubit across the first gap, makes a Bell measurement when the second qubit arrives, and uses the classical result to choose a one-qubit measurement on the third. The weighted measurement settings depend only on $`T`$.
@@ -32,7 +32,7 @@ If the first gap carries only a classical record, the best score is $`1/2+d/12`$
 
 ## A decision observable
 
-For a binary measurement with outcomes $`+1,-1`$ and effects $`E_+,E_-`$, write the difference of effects as $`D=E_+-E_-`$. Its expected decision is $`\operatorname{Tr}(D\rho)`$. Define the scalar-chirality observable in the Pauli convention
+For a binary measurement with outcomes $`+1,-1`$ and effects $`E_+,E_-`$, write the difference of effects as $`D=E_+-E_-`$. Its expected decision is $`\mathrm{Tr}(D\rho)`$. Define the scalar-chirality observable in the Pauli convention
 
 ```math
 \chi=\sum_{i,j,k\in\{x,y,z\}}\varepsilon_{ijk}\,

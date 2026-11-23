@@ -4,20 +4,20 @@ For a known unital qubit memory, usefulness is determined by the squared Frobeni
 
 ## Depolarization, dephasing, and unitarity
 
-A depolarizing memory with Bloch visibility $`v`$ has $`T=vI_3`$ and $`F=3v^2`$. Its visibility must exceed $`1/\sqrt3`$ for a gain. A dephasing memory with protected $`X`$ axis and transverse visibility $`v`$ has $`T=\operatorname{diag}(1,v,v)`$. Its $`F=1+2v^2`$ gives a gain for any positive transverse visibility. Complete dephasing lies at the threshold.
+A depolarizing memory with Bloch visibility $`v`$ has $`T=vI_3`$ and $`F=3v^2`$. Its visibility must exceed $`1/\sqrt3`$ for a gain. A dephasing memory with protected $`X`$ axis and transverse visibility $`v`$ has $`T=\mathrm{diag}(1,v,v)`$. Its $`F=1+2v^2`$ gives a gain for any positive transverse visibility. Complete dephasing lies at the threshold.
 
-For a unital qubit channel, the standard channel unitarity is $`u(\mathcal N)=F/3`$. This follows by averaging $`\lVert Tr\rVert_2^2`$ over unit Bloch vectors. The exact receiver criterion is therefore $`u(\mathcal N)>1/3`$. The average fidelity to the identity is $`1/2+\operatorname{Tr}(T)/6`$. The table evaluates two channels with the same average fidelity and different optimal decisions.
+For a unital qubit channel, the standard channel unitarity is $`u(\mathcal N)=F/3`$. This follows by averaging $`\lVert Tr\rVert_2^2`$ over unit Bloch vectors. The exact receiver criterion is therefore $`u(\mathcal N)>1/3`$. The average fidelity to the identity is $`1/2+\mathrm{Tr}(T)/6`$. The table evaluates two channels with the same average fidelity and different optimal decisions.
 
 | Memory map in Bloch coordinates | Average fidelity | Squared Frobenius norm | Optimal success at magnitude $`d`$ |
 |---|---:|---:|---:|
-| $`\operatorname{diag}(1/2,1/2,1/2)`$ | $`3/4`$ | $`3/4`$ | $`1/2+d/12`$ |
-| $`\operatorname{diag}(1,1/4,1/4)`$ | $`3/4`$ | $`9/8`$ | $`1/2+(d/12)\sqrt{9/8}`$ |
+| $`\mathrm{diag}(1/2,1/2,1/2)`$ | $`3/4`$ | $`3/4`$ | $`1/2+d/12`$ |
+| $`\mathrm{diag}(1,1/4,1/4)`$ | $`3/4`$ | $`9/8`$ | $`1/2+(d/12)\sqrt{9/8}`$ |
 
 Unitarity diagnoses usefulness in this model. Constructing the attaining receiver also uses the signed principal weights and axes of the memory map. See [related work](../references/RELATED_WORK.md) for the benchmarking definition.
 
 ## Amplitude damping rewards a weak first measurement
 
-Unitality removes affine offsets from the Pauli blocks in the [converse](converse.md). In a nonunital memory the affine term can interact with information gained at the first arrival. Consider amplitude damping with survival probability $`\eta\in[0,1]`$. Its Bloch action is $`r\mapsto Tr+c e_z`$, where $`T=\operatorname{diag}(\sqrt\eta,\sqrt\eta,\eta)`$ and $`c=1-\eta`$.
+Unitality removes affine offsets from the Pauli blocks in the [converse](converse.md). In a nonunital memory the affine term can interact with information gained at the first arrival. Consider amplitude damping with survival probability $`\eta\in[0,1]`$. Its Bloch action is $`r\mapsto Tr+c e_z`$, where $`T=\mathrm{diag}(\sqrt\eta,\sqrt\eta,\eta)`$ and $`c=1-\eta`$.
 
 For strength $`t\in[0,1]`$, first apply the two-outcome instrument
 

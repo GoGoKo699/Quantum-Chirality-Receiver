@@ -36,7 +36,7 @@ If $`P_s`$ are the Bell projectors for the chosen parity, then $`\sum_s s_{ij}P_
 A signed singular-value decomposition of the known Bloch matrix has the form
 
 ```math
-R^{\mathsf T} T S=\operatorname{diag}(\mu_x,\mu_y,\mu_z),
+R^{\mathsf T} T S=\mathrm{diag}(\mu_x,\mu_y,\mu_z),
 \qquad R,S\in SO(3).
 ```
 

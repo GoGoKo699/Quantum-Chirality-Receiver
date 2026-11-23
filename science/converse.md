@@ -33,14 +33,14 @@ For three Hermitian qubit blocks $`B_i`$, the norm of $`\sum_i B_i\otimes A_i`$ 
 
 ```math
 \left\lVert \sum_i B_i\otimes A_i\right\rVert_1
-=4\operatorname{Tr}\sqrt{\sum_i B_i^2}.
+=4\mathrm{Tr}\sqrt{\sum_i B_i^2}.
 ```
 
 In particular, $`\lVert \chi\rVert_1=8\sqrt3`$. This gives the fully joint optimum $`1/2+d/(4\sqrt3)`$ under the rotational prior.
 
 ## A classical first gap
 
-Let $`E_y`$ be the effect of the first measurement for outcome $`y`$ and define $`(v_y)_i=\operatorname{Tr}(E_y\sigma_i)`$. Positivity gives $`\lVert v_y\rVert_2\leq\operatorname{Tr}E_y`$. On the remaining pair the unnormalized branch of $`\Delta`$ is $`(d/24)\sum_i(v_y)_iA_i`$, whose trace norm is $`(d/6)\lVert v_y\rVert_2`$. The total trace norm is at most $`d/3`$ because $`\sum_y\operatorname{Tr}E_y=2`$. Thus the success probability is at most $`1/2+d/12`$ even when the two later qubits become available for a joint measurement. The same argument applies to continuous records by integration.
+Let $`E_y`$ be the effect of the first measurement for outcome $`y`$ and define $`(v_y)_i=\mathrm{Tr}(E_y\sigma_i)`$. Positivity gives $`\lVert v_y\rVert_2\leq\mathrm{Tr}E_y`$. On the remaining pair the unnormalized branch of $`\Delta`$ is $`(d/24)\sum_i(v_y)_iA_i`$, whose trace norm is $`(d/6)\lVert v_y\rVert_2`$. The total trace norm is at most $`d/3`$ because $`\sum_y\mathrm{Tr}E_y=2`$. Thus the success probability is at most $`1/2+d/12`$ even when the two later qubits become available for a joint measurement. The same argument applies to continuous records by integration.
 
 ## An arbitrary instrument before a unital memory
 
@@ -48,7 +48,7 @@ Refine the first-stage classical record to reveal one Kraus operator $`K`$ per b
 
 ```math
 P=\sqrt{s(I+t\,n\cdot\sigma)},\qquad
-s=\tfrac12\operatorname{Tr}K^\dagger K,\quad
+s=\tfrac12\mathrm{Tr}K^\dagger K,\quad
 0\leq t\leq1,\quad \lVert n\rVert_2=1.
 ```
 

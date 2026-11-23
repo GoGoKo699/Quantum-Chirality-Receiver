@@ -17,7 +17,7 @@ The experiment asks for a single handedness bit from three product qubits arrivi
 For single-qubit density operators with Bloch vectors $`r_1,r_2,r_3`$, the imaginary part of the ordered third-order Bargmann invariant is the signed volume divided by four:
 
 ```math
-4\operatorname{Im}\operatorname{Tr}(\rho_1\rho_2\rho_3)
+4\mathrm{Im}\mathrm{Tr}(\rho_1\rho_2\rho_3)
 =\det[r_1\;r_2\;r_3].
 ```
 
