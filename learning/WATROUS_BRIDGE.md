@@ -1,8 +1,8 @@
-# From Watrous to the chirality receiver
+# Supplemental notes on the unital receiver
 
 The receiver has three arrival slots and a one-qubit memory available in the first gap. It must infer the sign of the volume spanned by three Bloch vectors, which represent the input qubit states. Each run supplies one copy of each state. The source's common orientation is unknown, and the receiver uses its own calibrated axes.
 
-The educational anchor is **John Watrous, *The Theory of Quantum Information*, Cambridge University Press, 2018**. Section numbers below follow the author's 2018 manuscript. The targeted reading uses one textbook, with the receiver-specific symmetry, timing model, and protocol developed in the [scientific account](../science/README.md). See the [author's manuscript page](https://cs.uwaterloo.ca/~watrous/TQI/) and the [publisher's contents](https://doi.org/10.1017/9781316848142).
+These supplemental notes use **John Watrous, *The Theory of Quantum Information*, Cambridge University Press, 2018**. Section numbers below follow the author’s 2018 manuscript. The [shared source bridge](BARTLETT_RUDOLPH_SPEKKENS_BRIDGE.md) covers rotation twirling and spin multiplicities for both memory models. See the [author's manuscript page](https://cs.uwaterloo.ca/~watrous/TQI/) and the [publisher's contents](https://doi.org/10.1017/9781316848142).
 
 ## Targeted reading
 
@@ -56,4 +56,3 @@ P^\star(d,T)=\frac12+\frac{d}{12}\max\{1,\lVert T\rVert_F\}.
 ```
 
 Thus the memory improves the one-shot success probability precisely when $`\lVert T\rVert_F>1`$. For a depolarizing memory $`T=vI_3`$, the threshold is $`v>1/\sqrt3`$. For a general unital memory, the cost of waiting is summarized by the lengths of the three transformed axes. The [converse](../science/converse.md) and [channel examples](../science/memory-channels.md) give the complete derivation and operating assumptions.
-

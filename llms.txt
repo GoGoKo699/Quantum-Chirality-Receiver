@@ -10,9 +10,10 @@ For volume magnitude d and a known unital first-gap memory with Bloch matrix T, 
 - [Exact converse](science/converse.md) gives the rotation average, early classical-storage bound, and arbitrary-instrument proof for unital memory.
 - [Staged receiver](science/receiver.md) gives the weighted Bell measurement, readout, and physical timing.
 - [Channel examples and nonunital extension](science/memory-channels.md) separates the exact unital theorem from the amplitude-damping lower bound.
+- [Flagged polarization memory](science/flagged-polarization-memory.md) solves the staged minimax decision with one four-carrier spin-zero block and quantifies the value of keeping the spin tag at fixed masks.
 - [Attribution](references/RELATED_WORK.md) compares the result with established chirality, joint measurement, and noisy-storage work.
 
 ## Learn and reproduce
 
-- [Learning overview](learning/README.md), [Watrous bridge](learning/WATROUS_BRIDGE.md), and [30 milestones](learning/MILESTONES.md).
+- [Learning overview](learning/README.md), [Bartlett–Rudolph–Spekkens bridge](learning/BARTLETT_RUDOLPH_SPEKKENS_BRIDGE.md), and [30 milestones](learning/MILESTONES.md).
 - [Reproduction](verification/README.md) documents the executable matrix checks and their scope.

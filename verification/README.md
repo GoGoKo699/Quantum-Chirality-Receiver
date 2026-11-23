@@ -5,6 +5,7 @@ From the repository root, install NumPy in a Python 3 environment and run the ve
 ```sh
 python -m pip install -r verification/requirements.txt
 python verification/verify.py
+python verification/verify_flagged_polarization.py
 ```
 
 The fixed-seed script checks these identities in matrices of size 2, 4, and 8.
@@ -16,3 +17,7 @@ The fixed-seed script checks these identities in matrices of size 2, 4, and 8.
 - The staged amplitude-damping lower bound by direct pullback of the branch-conditioned readout and explicit common input rotations. It also checks sample cases of the later-joint-access construction that beats the classical benchmark.
 
 The [scientific account](../science/README.md) gives the analytic arguments for the full parameter ranges. The finite floating-point checks use a tolerance of $`10^{-11}`$.
+
+## Flagged polarization loss
+
+The [polarization verifier](verify_flagged_polarization.py) checks the decoded logical identity, state-independent erasure flags, two-survivor spin effects, the staged measurement, and the comparison with a mask-only decoder. The exact ranges and optimality arguments are in the [flagged-memory theorem](../science/flagged-polarization-memory.md).

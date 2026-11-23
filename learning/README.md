@@ -4,8 +4,10 @@ Start with three qubits, each prepared once and delivered in sequence. Their Blo
 
 | Route | Read |
 |---|---|
-| Worked example and mathematical background | [Watrous bridge](WATROUS_BRIDGE.md) |
+| Source sections and worked examples | [Bartlett–Rudolph–Spekkens bridge](BARTLETT_RUDOLPH_SPEKKENS_BRIDGE.md) |
 | Complete understanding map | [30 milestones](MILESTONES.md) |
 | Exact statements, proofs, and receiver construction | [Scientific account](../science/README.md) |
 
 The milestones move from one-qubit states and measurements through the two temporal gaps, then join the attainable receiver and the bound on all receiver strategies.
+
+The earlier [linear algebra and discrimination notes](WATROUS_BRIDGE.md) give additional examples for the unital theorem.
