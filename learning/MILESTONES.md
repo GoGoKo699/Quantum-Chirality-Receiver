@@ -1,6 +1,6 @@
 # Project understanding map
 
-These 30 milestones trace how a receiver infers handedness from three qubits delivered in order. The first 12 establish the input states, measurement rules, and noise and timing models. The next 18 build the timed Bell receiver and its matching converse, then apply them to specific channels. The single educational anchor is John Watrous's *The Theory of Quantum Information*. The [Watrous bridge](WATROUS_BRIDGE.md) gives section references, notation, and a worked example.
+These 30 milestones trace a three-arrival handedness decision from single-qubit measurements to the exact scores for unital noise and for a flagged polarization memory. The [Bartlett–Rudolph–Spekkens bridge](BARTLETT_RUDOLPH_SPEKKENS_BRIDGE.md) introduces the common source and connects its rotation twirl and spin decompositions to both receivers.
 
 | Phase | Milestones | Scientific connection |
 |---|---|---|
@@ -9,7 +9,7 @@ These 30 milestones trace how a receiver infers handedness from three qubits del
 | Narrative/innovation | [M13](#m13-the-chirality-operator)–[M16](#m16-the-first-gap-matters) | Observable, ideal reference score, and first-gap separation |
 | Narrative/innovation | [M17](#m17-principal-memory-axes)–[M22](#m22-cyclically-aligning-the-principal-axes) | Timed Bell receiver for arbitrary known unital noise |
 | Narrative/innovation | [M23](#m23-refining-the-first-slot-instrument)–[M26](#m26-the-exact-minimax-score) | Bound for every first-slot instrument and the exact score |
-| Narrative/innovation | [M27](#m27-interpreting-the-threshold)–[M30](#m30-the-complete-result) | Physical meaning, examples, and scope |
+| Narrative/innovation | [M27](#m27-interpreting-the-threshold)–[M30](#m30-the-complete-result) | Channel thresholds, storage schedules, and spin tags |
 
 ## Phase I · Background and preliminaries
 
@@ -23,7 +23,7 @@ These 30 milestones trace how a receiver infers handedness from three qubits del
 
 **Conceptual connection.** Recognize what is physically accessible from a single shot and what is a property of the preparation.
 
-**Source pointers.** [Watrous Chapter 2](https://cs.uwaterloo.ca/~watrous/TQI/TQI.2.pdf) · [Worked example](WATROUS_BRIDGE.md#a-complete-first-example)
+**Source pointers.** [Unital background notes](WATROUS_BRIDGE.md) · [Worked example](WATROUS_BRIDGE.md#a-complete-first-example)
 
 ### M02 Measuring a spin component
 
@@ -35,7 +35,7 @@ These 30 milestones trace how a receiver infers handedness from three qubits del
 
 **Conceptual connection.** Use the same language for a Cartesian Pauli measurement and a later measurement along a weighted axis.
 
-**Source pointers.** [Watrous Chapter 2](https://cs.uwaterloo.ca/~watrous/TQI/TQI.2.pdf) · [Worked example](WATROUS_BRIDGE.md#a-complete-first-example)
+**Source pointers.** [Unital background notes](WATROUS_BRIDGE.md) · [Worked example](WATROUS_BRIDGE.md#a-complete-first-example)
 
 ### M03 Ordered product states
 
@@ -47,7 +47,7 @@ These 30 milestones trace how a receiver infers handedness from three qubits del
 
 **Conceptual connection.** Use order to distinguish the roles of the first and second temporal gaps.
 
-**Source pointers.** [Watrous Chapter 2](https://cs.uwaterloo.ca/~watrous/TQI/TQI.2.pdf) · [Model](../science/model.md)
+**Source pointers.** [Unital background notes](WATROUS_BRIDGE.md) · [Model](../science/model.md)
 
 ### M04 Oriented volume
 
@@ -83,7 +83,7 @@ These 30 milestones trace how a receiver infers handedness from three qubits del
 
 **Conceptual connection.** Give a causal description of an adaptive measurement even when no quantum register crosses a gap.
 
-**Source pointers.** [Watrous Chapter 2](https://cs.uwaterloo.ca/~watrous/TQI/TQI.2.pdf) · [Receiver](../science/receiver.md)
+**Source pointers.** [Unital background notes](WATROUS_BRIDGE.md) · [Receiver](../science/receiver.md)
 
 ### M07 A noisy qubit channel
 
@@ -95,7 +95,7 @@ These 30 milestones trace how a receiver infers handedness from three qubits del
 
 **Conceptual connection.** Relate the length and direction of a stored Bloch vector to the memory's action.
 
-**Source pointers.** [Watrous Chapter 2](https://cs.uwaterloo.ca/~watrous/TQI/TQI.2.pdf) · [Watrous §4.1.2](https://cs.uwaterloo.ca/~watrous/TQI/TQI.4.pdf) · [Memory channels](../science/memory-channels.md)
+**Source pointers.** [Unital background notes](WATROUS_BRIDGE.md) · [Memory channels](../science/memory-channels.md)
 
 ### M08 A measurement with a retained output
 
@@ -107,7 +107,7 @@ These 30 milestones trace how a receiver infers handedness from three qubits del
 
 **Conceptual connection.** Include weak measurements and classical-only and retain-only strategies in one operational model.
 
-**Source pointers.** [Watrous Chapter 2](https://cs.uwaterloo.ca/~watrous/TQI/TQI.2.pdf) · [Converse](../science/converse.md)
+**Source pointers.** [Unital background notes](WATROUS_BRIDGE.md) · [Converse](../science/converse.md)
 
 ### M09 Trace and Frobenius norms
 
@@ -119,7 +119,7 @@ These 30 milestones trace how a receiver infers handedness from three qubits del
 
 **Conceptual connection.** The trace norm limits discrimination of the two reachable states. The Frobenius norm of the memory Bloch matrix determines the final threshold.
 
-**Source pointers.** [Watrous §§1.1.2–1.1.3](https://cs.uwaterloo.ca/~watrous/TQI/TQI.1.pdf) · [Converse](../science/converse.md)
+**Source pointers.** [Unital background notes](WATROUS_BRIDGE.md) · [Converse](../science/converse.md)
 
 ### M10 Averaging a common rotation
 
@@ -131,7 +131,7 @@ These 30 milestones trace how a receiver infers handedness from three qubits del
 
 **Conceptual connection.** Keep the geometry of the triple intact while removing the arbitrary lab orientation in the upper-bound calculation.
 
-**Source pointers.** [Watrous §7.2.1](https://cs.uwaterloo.ca/~watrous/TQI/TQI.7.pdf) · [Model](../science/model.md)
+**Source pointers.** [Collective twirling](BARTLETT_RUDOLPH_SPEKKENS_BRIDGE.md#reading-the-review) · [Model](../science/model.md)
 
 ### M11 Binary state discrimination
 
@@ -143,7 +143,7 @@ These 30 milestones trace how a receiver infers handedness from three qubits del
 
 **Conceptual connection.** Apply the same bound to a classical record together with an unmeasured quantum system.
 
-**Source pointers.** [Watrous §3.1.1](https://cs.uwaterloo.ca/~watrous/TQI/TQI.3.pdf) · [Converse](../science/converse.md)
+**Source pointers.** [Unital background notes](WATROUS_BRIDGE.md) · [Converse](../science/converse.md)
 
 ### M12 The full receiver model
 
@@ -217,7 +217,7 @@ These 30 milestones trace how a receiver infers handedness from three qubits del
 
 **Conceptual connection.** Reduce channel-dependent construction to three real weights whose squared sum is $`\lVert T\rVert_F^2`$.
 
-**Source pointers.** [Watrous §§1.1.2–1.1.3](https://cs.uwaterloo.ca/~watrous/TQI/TQI.1.pdf) · [Memory channels](../science/memory-channels.md) · [Receiver](../science/receiver.md)
+**Source pointers.** [Unital background notes](WATROUS_BRIDGE.md) · [Memory channels](../science/memory-channels.md) · [Receiver](../science/receiver.md)
 
 ### M18 One Bell measurement on the first pair
 
@@ -229,7 +229,7 @@ These 30 milestones trace how a receiver infers handedness from three qubits del
 
 **Conceptual connection.** Read the pair into two independent classical bits before the third qubit arrives.
 
-**Source pointers.** [Watrous Chapter 2](https://cs.uwaterloo.ca/~watrous/TQI/TQI.2.pdf) · [Receiver](../science/receiver.md)
+**Source pointers.** [Unital background notes](WATROUS_BRIDGE.md) · [Receiver](../science/receiver.md)
 
 ### M19 The last measurement axis
 
@@ -301,7 +301,7 @@ These 30 milestones trace how a receiver infers handedness from three qubits del
 
 **Conceptual connection.** Reduce the full three-qubit spectrum to a two-dimensional positive matrix on the memory output.
 
-**Source pointers.** [Converse](../science/converse.md)
+**Source pointers.** [Converse](../science/converse.md) · [Spin decomposition](BARTLETT_RUDOLPH_SPEKKENS_BRIDGE.md#reading-the-review)
 
 ### M25 Bounding every branch
 
@@ -335,21 +335,21 @@ These 30 milestones trace how a receiver infers handedness from three qubits del
 
 **Prerequisites.** [M07](#m07-a-noisy-qubit-channel), [M09](#m09-trace-and-frobenius-norms), [M17](#m17-principal-memory-axes), [M26](#m26-the-exact-minimax-score).
 
-**Conceptual connection.** Use the three stored-axis gains to diagnose the usefulness of a memory for this task.
+**Conceptual connection.** Use the three stored-axis gains to diagnose a unital memory. In the spin-zero block, compute the probability of recovering the full logical qubit and determine when that probability is positive.
 
-**Source pointers.** [Memory channels](../science/memory-channels.md)
+**Source pointers.** [Memory channels](../science/memory-channels.md) · [Decoded first-gap channel](../science/flagged-polarization-memory.md#the-decoded-first-gap-channel)
 
 ### M28 The storage schedule
 
 **Central question.** What has to remain coherent at each stage of an optimal run?
 
-**Understanding target.** Identify the first input as the quantum register crossing the first gap. At the second arrival the Bell measurement turns the first two inputs into a classical record, which selects the last measurement.
+**Understanding target.** Trace the first specimen through each memory. The Bell receiver uses a parity setting and signs after the second arrival. The flagged-loss receiver uses the tag or a six-outcome measurement of the recovered qubit and the second specimen. Both records select a Pauli measurement on specimen three.
 
 **Prerequisites.** [M12](#m12-the-full-receiver-model), [M16](#m16-the-first-gap-matters), [M18](#m18-one-bell-measurement-on-the-first-pair), [M19](#m19-the-last-measurement-axis), [M26](#m26-the-exact-minimax-score).
 
 **Conceptual connection.** Translate the score separation into a specific requirement on when storage is useful and what may be discarded.
 
-**Source pointers.** [Model](../science/model.md) · [Receiver](../science/receiver.md)
+**Source pointers.** [Model](../science/model.md) · [Receiver](../science/receiver.md) · [Optimal staged measurement](../science/flagged-polarization-memory.md#optimal-staged-measurement-of-the-recovered-qubit)
 
 ### M29 Amplitude damping and weak measurement
 
@@ -365,12 +365,12 @@ These 30 milestones trace how a receiver infers handedness from three qubits del
 
 ### M30 The complete result
 
-**Central question.** How do geometry, noise, and arrival timing determine the outcome together?
+**Central question.** How can the spin tag help when both receivers see the same losses?
 
-**Understanding target.** Explain the exact unital success curve, the measurement sequence that attains it, the role of the first-gap converse, and the promise under which the formula applies. Use both depolarization and dephasing to illustrate the distinction.
+**Understanding target.** Compare the two exact flagged-memory scores with the loss mask held fixed. Explain why a refined rank-one effect preserves more first-specimen information and check that the staged tagged receiver beats the joint mask-only receiver at the stated example.
 
 **Prerequisites.** [M12](#m12-the-full-receiver-model), [M13](#m13-the-chirality-operator), [M26](#m26-the-exact-minimax-score), [M27](#m27-interpreting-the-threshold), [M28](#m28-the-storage-schedule), [M29](#m29-amplitude-damping-and-weak-measurement).
 
-**Conceptual connection.** Connect a determinant-based signal in the source to an implementable decision, and identify the evidence supporting each part of the claim.
+**Conceptual connection.** Separate finite decision utility from asymptotic quantum capacity. Give the charged carrier count and the quantum storage used at each gap.
 
-**Source pointers.** [Model](../science/model.md) · [Receiver](../science/receiver.md) · [Converse](../science/converse.md) · [Memory channels](../science/memory-channels.md)
+**Source pointers.** [Exact scores](../science/flagged-polarization-memory.md#exact-scores) · [Mask-only comparison](../science/flagged-polarization-memory.md#arbitrary-first-instruments-and-the-mask-only-comparison) · [Worked loss example](BARTLETT_RUDOLPH_SPEKKENS_BRIDGE.md#two-survivors-and-one-classical-bit)

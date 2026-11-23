@@ -25,6 +25,10 @@ Oszmaniec, Brod and Galvão give the general cycle-test route to complex Bargman
 
 Collins et al. encode spatial parity in rotationally invariant physical states. Here the label is the orientation of three ordered Bloch vectors under common proper rotations in a Pauli frame. The distinction matters for physical implementations in which the Bloch components are axial spin coordinates. [Phys. Rev. A 72, 022304 (2005)](https://doi.org/10.1103/PhysRevA.72.022304)
 
+## Polarization loss and spin tags
+
+Bartlett, Rudolph and Spekkens give the collective rotation twirl and rotation-invariant encodings. Migdał and Banaszek show why the spin-zero code returns a logical qubit after one carrier is removed. Filippov develops the generalized erasure channel for a known polarization-dependent filter. The fixed Schur decoder for a filter of unknown axis supplies the loss masks and spin effects used here. The decision theorem gives the resulting staged handedness score and an exact comparison with the same masks after the spin tag is discarded. [Review](https://doi.org/10.1103/RevModPhys.79.555) · [Particle loss](https://doi.org/10.1103/PhysRevA.84.052318) · [Generalized erasure](https://doi.org/10.1088/1751-8121/abfd61) · [Decoded channel](https://github.com/GoGoKo699/Quantum-Polarization-Loss-Coding/blob/bb539ea2307da5c17a91d1d9976a99c8521f8fbb/science/schur_receiver.md) · [Decision theorem](../science/flagged-polarization-memory.md)
+
 ## Related portfolio results
 
 - **Vacancy Chirality Readout** provides the fully separable effect bound and the uniform six-setting Pauli measurement used by the classical receiver. Its main result is a precision separation for estimating chirality from repeated copies in a four-mode, site-parity detection architecture. [Separable benchmark](https://github.com/GoGoKo699/Vacancy-Chirality-Readout/blob/6b22b2a06c0c8adc53d69765fa907ebb8a6d33ef/research/SEPARABLE_BENCHMARK.md) · [Parity theory](https://github.com/GoGoKo699/Vacancy-Chirality-Readout/blob/6b22b2a06c0c8adc53d69765fa907ebb8a6d33ef/research/COMPLETE_PARITY_THEORY.md)
